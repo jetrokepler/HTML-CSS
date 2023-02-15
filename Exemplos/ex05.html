@@ -25,6 +25,91 @@
     <p>A tag &lt;strong&gt; significa que o termo delimitado possui força dentro da frase. Logo,
         ele aparecerá em negrito.</p>
     <p>Já a tag &lt;em&gt; significa que queremos dar ênfase (do Inglês emphasis) ao termo. Logo, ele aparecerá em itálico.</p>
-    <p>Note que, ao usar &lt;strong&gt; e &lt;em&gt; no lugar de &lt;b&gt; e &lt;i&gt;, damos mais significado aos nossos termos e conteúdos. Como eles vão ser representados visualmente (forma), vai depender das nossas folhas de estilo CSS.</p>
+    <p>Note que, ao usar &lt;strong&gt; e &lt;em&gt; no lugar de &lt;b&gt; e &lt;i&gt;, damos mais significado aos nossos termos e conteúdos. <br> Exemplos: </p>
+    <strong>Este é um exemplo de um texto em negrito.</strong>
+    <br>
+    <em>Este é um exemplo de um texto em itálico.</em>
+    <br>
+    <strong><em>Este é um exemplo de um texto em negrito e itálico.</em></strong>
+    <h4>Marca texto.</h4>
+    <p>Para fazer essas marcas em HTML5, usamos a tag &lt;mark&gt; para
+        delimitar o texto que queremos demarcar, como se estivéssemos usando uma
+        caneta marcador. <br> Exemplo:</p>
+    <mark>Este é um exemplo de um texto com marcador.</mark>
+    <h4>&lt;small&gt;, texto deletado e texto inserido.</h4>
+    <p>Antigamente existia a tag &lt;strike&gt;, que hoje também está depreciada pela última
+        versão da HTML. No lugar dela entrou a tag &lt;del&gt;, que significa que o texto está ali,
+        pode até ser lido, mas deve ser desconsiderado pelo leitor (texto deletado).</p>
+    <p>A tag &lt;small&gt; deixa o texto menor, e o texto inserido é o exato oposto do texto deletado que vimos anteriormente. Nesse
+        caso, se colocarmos um texto qualquer dentro de &lt;ins&gt; e &lt;/ins&gt;, estamos dizendo
+        que o texto está ali, deve ser lido e você deve prestar atenção nele. É o que fazíamos
+        anteriormente ao utilizar a tag &lt;u&gt; para sublinhar um texto. <br> Exemplos:</p>
+    <ins>Este é um exemplo de um texto inserido.</ins>
+    <br>
+    <del>Este é um exemplo de um texto deltado.</del>
+    <br>
+    <small>Este é um exemplo de um texto com a tag &lt;small&gt;.</small>
+    <h4>Texto sobrescrito e subscrito.</h4>
+    <p>Para utlizar um texto sobrescrito utiliza-se a tag e para um texto subscrito utiliza-se a tag. <br> Exemplos:</p>
+    <p>Este <sup> é um exemplo de um texto sobrescrito.</sup></p>
+    <br>
+    <p>Este <sub> é um exemplo de um texto subscrito.</sub></p>
+    <h4>Trechos de código.</h4>
+    <p>Para isso, existe a tag &lt/code&gt; da HTML onde você pode
+        delimitar seu código. A principal vantagem no uso dessa tag é a o valor semântico que
+        ela representa, indicando ao navegador que se trata de um código de computador.
+        Porém, existe também um efeito visual, pois as letras ficam no modo mono-espaçadas
+        (monospace), o que facilita bastante a leitura do código. Vamos usar uma outra tag HTML chamada &lt;pre&gt;, que
+        mantém o texto pré-formatado, exatamente da mesma maneira na qual ele foi
+        digitado, incluindo quebras de linhas, espaços e tabulações. <br> Analise, por exemplo, o
+        trecho de código a seguir:</p>
+    <pre><code>
+    nota1 = float
+    nota2 = float
+    trabalho = float
+    mediaponderada = float
+        
+    nota1 = float(input("Informe a nota da 1º prova (peso de 30%): "))
+    nota2 = float(input("Informe a nota da 2º prova (peso de 50%): "))
+    trabalho = float(input("Informe a nota do trabalho (peso de 20%): "))
+        
+    mediaponderada = ((nota1 * 30) + (nota2 * 50) + (trabalho * 20)) / 100
+        
+    if mediaponderada >= 7:
+        print("Aprovado! O resultado é: " + str(mediaponderada))
+    else:
+        print("Reprovado! O resultado é: " + str(mediaponderada))
+    </code></pre>
+<h4>Citações.</h4>
+<p>Para criar uma citação em HTML, podemos usar a tag &lt;q&gt; (do Inglês quote, que
+    significa citar). O texto que estiver entre &lt;q&gt; e &lt;/q&gt; já vai receber automaticamente
+    as aspas, mas não terá nenhum deslocamento. Essa técnica é mais usada quando
+    queremos uma citação no meio de um parágrafo.</p>
+<p>Também podemos criar citações mais longas (em bloco) e que tenham um parágrafo
+    só para si. Nesse caso, colocaremos tudo dentro de &lt;blockquote&gt; e &lt;/blockquote&gt; e o texto ganha um recuo automaticamente. Podemos também colocar um link para o
+    texto original, usando o parâmetro cite dentro da tag. <br> Exemplos:</p>
+<q>Este é um exemplo de uma citação.</q>
+<blockquote>
+R é uma linguagem de programação estatística e gráfica que vem se especializando na manipulação, análise e visualização de dados (exemplo com a tag &lt;blockquote&gt;).
+</blockquote>
+<h4>Abreviações.</h4>
+<p>Essa é uma novidade da HTML5 e que ajuda muito em áreas como a de Tecnologia,
+    que usa muitas siglas e abreviações. Sempre que você quiser escrever uma sigla, mas
+    deixar claro ao usuário (e aos mecanismos de busca) o significado dela, use a tag
+    &lt;abbr&gt;. <br> Exemplo:</p>
+<p>Eu estou usando <abbr title="Hyper Text Markup Language">HTML</abbr> para cirar sites.</p>
+<h4>Texto invertido.</h4>
+<p>é exatamente essa a função da tag &lt;bdo&gt;. <br>
+    Para começo de conversa, BDO significa bi-directional override. Ao usar essa tag,
+    coloque também o parâmetro dir para indicar uma das duas direções possíveis:
+    <br>
+    rtl = da direita para a esquerda (right-to-left);
+    <br>
+    ltr = da esquerda para a direita (left-to-right).
+    <br>
+    Exemplos:</p>
+    <bdo dir="rtl">Esse é um exemplo de um texto da direita para esquerda.</bdo>
+    <br>
+    <bdo dir="ltr">Esse é um exemplo de um texto da esquerda para direita.</bdo>
 </body>
 </html>
